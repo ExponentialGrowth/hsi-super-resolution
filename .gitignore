@@ -1,15 +1,14 @@
-# Virtual environments
+# ==========================================
+# SVNIT ISRO Specific Ignores (Local Workspace)
+# ==========================================
 .venv/
 venv/
 ENV/
 env/
-
-# Python caching
 __pycache__/
 *.py[cod]
 *$py.class
 
-# IDE and Editor files
 .vscode/
 .idea/
 *.suo
@@ -18,7 +17,7 @@ __pycache__/
 *.sln
 *.swp
 
-# Datasets and large HSI data files
+# Large datasets, checkpoints, models, weights and outputs
 *.mat
 *.npy
 *.npz
@@ -30,7 +29,6 @@ __pycache__/
 *.tar.gz
 *.rar
 
-# Specific folders containing datasets, weights, outputs, and media
 implement/model/dataset/
 implement/model/weights/
 implement/model/output/
@@ -44,10 +42,135 @@ implement/a-PyTorch-Tutorial-to-Super-Resolution/checkpoint/
 implement/super-resolution/original_test_images.json
 implement/super-resolution/train_images.json
 
-# Local logs and temp files
 log/
 *.log
 *.xlsx
 *.csv
 .DS_Store
 Thumbs.db
+
+# ==========================================
+# Standard Python/Jupyter/IDE Git Ignores
+# ==========================================
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# environments
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Abstra
+.abstra/
+
+tempCodeRunnerFile.py
+
+# Ruff stuff:
+.ruff_cache/
+
+# PyPI configuration file
+.pypirc
+
+# Marimo
+marimo/_static/
+marimo/_lsp/
+__marimo__/
+
+# Streamlit
+.streamlit/secrets.toml
