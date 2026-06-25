@@ -1,0 +1,53 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Datasets and large HSI data files
+*.mat
+*.npy
+*.npz
+*.tif
+*.tiff
+*.zip
+*.tar
+*.gz
+*.tar.gz
+*.rar
+
+# Specific folders containing datasets, weights, outputs, and media
+implement/model/dataset/
+implement/model/weights/
+implement/model/output/
+implement/model/output of img incRes/
+implement/model/sr_results/
+implement/model/checkpoints/
+implement/super-resolution/checkpoint_srgan.pth.tar
+implement/super-resolution/checkpoint_srresnet.pth.tar
+implement/a-PyTorch-Tutorial-to-Super-Resolution/media/
+implement/a-PyTorch-Tutorial-to-Super-Resolution/checkpoint/
+implement/super-resolution/original_test_images.json
+implement/super-resolution/train_images.json
+
+# Local logs and temp files
+log/
+*.log
+*.xlsx
+*.csv
+.DS_Store
+Thumbs.db

@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "a-PyTorch-Tutorial-to-Super-Resolution",
+			"path": "."
+		},
+		{
+			"name": "train2014",
+			"path": "../../../Downloads/train2014"
+		},
+		{
+			"name": "val2014",
+			"path": "../../../Downloads/val2014"
+		},
+		{
+			"path": "../../../Downloads/Set14"
+		},
+		{
+			"path": "../../../Downloads/Set5"
+		},
+		{
+			"path": "../../../Downloads/BSDS100"
+		}
+	],
+	"settings": {}
+}

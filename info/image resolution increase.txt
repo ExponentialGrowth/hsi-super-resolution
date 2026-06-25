@@ -1,0 +1,11 @@
+image resolution increase 
+
+
+https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Super-Resolution
+
+https://github.com/junjun-jiang/Hyperspectral-Image-Super-Resolution-Benchmark
+
+dataset
+https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes#Pavia_Centre_and_University
+
+	

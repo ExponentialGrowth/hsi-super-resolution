@@ -1,0 +1,80 @@
+In deep learning and computer vision, these hyperparameters control how your model "sees" data and how quickly it learns. Since you are working in an environment related to research (SVNIT/ISRO), these parameters are likely for a **Super-Resolution (SR)** or **Image Reconstruction** task.
+
+---
+
+## 1. Epochs (5–100)
+
+**Meaning:** The number of times the model passes through the **entire dataset**.
+
+* **1 Epoch:** The model has seen every single training image exactly once.
+* **Why it matters:** Too few epochs lead to **underfitting** (the model hasn't learned the patterns yet). Too many can lead to **overfitting** (the model memorizes the training data but fails on new images).
+* **Strategy:** Start with 20–50 and monitor the "Loss" curve. If the loss is still dropping, increase it.
+
+## 2. Batch Size (1–16)
+
+**Meaning:** The number of training samples processed before the model updates its internal weights.
+
+* **Small Batch (1–4):** Uses less GPU memory. It provides a "noisy" gradient, which can sometimes help the model escape local minima but takes longer to train.
+* **Large Batch (8–16):** More stable training and faster processing per epoch, but requires significantly more **VRAM** (GPU Memory).
+* **Note:** In high-resolution image tasks, batch sizes are often small (like 4 or 8) because images take up a lot of space on the GPU.
+
+## 3. Learning Rate ( to )
+
+**Meaning:** This controls the size of the "step" the model takes while searching for the minimum error (loss).
+
+* **High LR ():** The model learns fast but might "overshoot" the solution and become unstable.
+* **Low LR ():** The model learns very carefully and precisely, but training will be extremely slow and might get stuck.
+* **Typical Choice:**  () is the "goldilocks" starting point for many PyTorch models.
+
+## 4. Scale Factor (1–4x)
+
+**Meaning:** Specific to Image Processing/Super-Resolution, this defines the **magnification ratio**.
+
+* **2x:** If your input is  pixels, the output will be .
+* **4x:** The model attempts to reconstruct 16 pixels for every 1 pixel in the input ( area).
+* **Why it matters:** Higher scale factors (like 4x) are much harder for the model to learn because it has to "hallucinate" or predict a lot of missing detail.
+
+---
+
+### Recommended "Starting" Configuration
+
+Since you are testing your GPU setup, try this "Safe" configuration first to ensure you don't run out of memory (OOM):
+
+| Parameter | Recommended Value | Reason |
+| --- | --- | --- |
+| **Epochs** | 20 | Enough to see progress without waiting hours. |
+| **Batch Size** | 4 | Safe for most mid-range GPUs (8GB VRAM). |
+| **Learning Rate** | 0.0001 () | Standard stable starting point. |
+| **Scale Factor** | 2x | Easier for the model to converge initially. |
+
+---
+
+### How to apply these in your PyTorch Code:
+
+```python
+# Example of using these parameters
+learning_rate = 1e-4
+batch_size = 4
+
+model = YourModel(scale_factor=2).to(device)
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+# Use a DataLoader for batch_size management
+
+```
+
+**Would you like me to help you write a basic Training Loop that incorporates these four parameters?**
+
+
+Test Model (Inference) - Two Progress Indicators
+Loading Progress Bar (blue) - Shows model initialization progress
+
+0% → Loading starts
+20% → Model class selected
+50% → Model loaded to device
+100% → Ready for inference
+Processing Progress Bar (green) - Shows inference execution progress
+
+0% → Inference starts
+30% → Data prepared
+60% → Inference running
+100% → Results saved
