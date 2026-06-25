@@ -28,6 +28,8 @@ __pycache__/
 *.gz
 *.tar.gz
 *.rar
+*.mp4
+paper/
 
 implement/model/dataset/
 implement/model/weights/
@@ -37,8 +39,12 @@ implement/model/sr_results/
 implement/model/checkpoints/
 implement/super-resolution/checkpoint_srgan.pth.tar
 implement/super-resolution/checkpoint_srresnet.pth.tar
+implement/super-resolution/test_dataset/
+implement/super-resolution/img/
 implement/a-PyTorch-Tutorial-to-Super-Resolution/media/
 implement/a-PyTorch-Tutorial-to-Super-Resolution/checkpoint/
+implement/a-PyTorch-Tutorial-to-Super-Resolution/img/
+implement/a-PyTorch-Tutorial-to-Super-Resolution/test_dataset/
 implement/super-resolution/original_test_images.json
 implement/super-resolution/train_images.json
 
@@ -151,6 +157,7 @@ dmypy.json
 .pyre/
 
 # pytype static type analyzer
+.pyre/
 .pytype/
 
 # Cython debug symbols
